@@ -1,5 +1,5 @@
 # RTL TO GDSII: SEQUENCE DETECTOR 110
-SUBMITTED BY : Devanshi Agarwal 
+-Devanshi Agarwal 
 ## INTRODUCTION:
 A sequence detector in digital electronics is a circuit that generates an output signal when a specific sequence of input bits is detected.For combinational designs, the output value completely depends on the present value of the inputs and for sequential designs, output value not only depends on present input but also depends on its previously stored value i.e. past behavior of the design. These sequential designs are formally knowns as finite-state machines that have a fixed number of states.
 

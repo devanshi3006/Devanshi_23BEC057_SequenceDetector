@@ -1,4 +1,5 @@
 # RTL TO GDSII: SEQUENCE DETECTOR 110
+SUBMITTED BY : Devanshi Agarwal 
 ## INTRODUCTION:
 A sequence detector in digital electronics is a circuit that generates an output signal when a specific sequence of input bits is detected.For combinational designs, the output value completely depends on the present value of the inputs and for sequential designs, output value not only depends on present input but also depends on its previously stored value i.e. past behavior of the design. These sequential designs are formally knowns as finite-state machines that have a fixed number of states.
                                                      ![image](https://github.com/user-attachments/assets/9ccd4b92-4cb2-42e7-9027-08aec69b2271)
@@ -296,6 +297,11 @@ GUI:
 ## CREDITS:
 - This project was finished as a component of Pandit Deendayal Energy University's (PDEU) RTL to GDSII Flow workshop.
 - We are deeply appreciative of VLSI Expert Mr. Puneet Mittal, for his outstanding leadership, technical mentoring, and unwavering support during the workshop, and the distinguished PDEU teaching members, for providing a solid basis in VLSI design and facilitating hands-on learning with cutting-edge EDA tools.
+## SUBMITTED BY:
+- Name: Devanshi Agarwal
+- Roll no.: 23BEC057
+- College: Pandit Deendayal Energy University, Gandhinagar
+- Email ID: 23bec057@sot.pdpu.ac.in
 
 
 

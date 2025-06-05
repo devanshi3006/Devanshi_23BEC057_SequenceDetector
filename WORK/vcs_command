@@ -1,0 +1,4 @@
+#vcs -full64 full_adder.v -debug_access+all -lca -kdb
+vcs -full64 full_adder_tb.v -debug_access+all -lca -kdb
+./simv Verdi
+verdi -ssf novas.fsdb -nologo

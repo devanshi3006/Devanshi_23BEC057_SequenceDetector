@@ -1,0 +1,4 @@
+set NOVAS_HOME=/usr/synopsys/verdi/S-2021.09-SP2-5
+set VERDI_HOME=/usr/synopsys/verdi/S-2021.09-SP2-5
+export NOVAS_HOME=/usr/synopsys/verdi/S-2021.09-SP2-5
+export VERDI_HOME=/usr/synopsys/verdi/S-2021.09-SP2-5

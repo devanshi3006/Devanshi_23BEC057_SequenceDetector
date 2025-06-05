@@ -1,0 +1,3 @@
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+simSetSimulator "-vcssv" -exec "/home/puneet/RTL2GDSII/WORK/simv" -args "Verdi"
+debImport "-dbdir" "/home/puneet/RTL2GDSII/WORK/simv.daidir"

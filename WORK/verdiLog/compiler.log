@@ -1,0 +1,12 @@
+*design* DebussyLib (btIdent Verdi_S-2021.09-SP2-5)
+Command arguments:
+
+*Warning* The -simflow option is ignored when importing the design from source. 
+
+    +define+verilog
+    /home/puneet/RTL2GDSII/WORK/full_adder_tb.v
+
+Highest level modules:
+testbench
+
+Total	0 error(s),   1 warning(s)

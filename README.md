@@ -17,6 +17,20 @@ Both Mealy and Moore machines can be used to design sequence detector logic. Fur
 
 **Verdi**: Waveform viewer for debugging simulation results
 
-****
+## FLOW OF THE PROJECT
+![FINITE STATE MACHINE](https://github.com/user-attachments/assets/e3ab79ac-12c7-47ec-a586-4f48c6a2fabb)
 
-
+## IMPORTANT COMMANDS
+### ENVIRONMENT SETUP
+``` which vcs
+which verdi
+which dc_shell
+which icc2_shell
+which pt_shell
+```
+### Checks to see if the Synopsys tools are installed successfully and in the system path.
+``` verdi
+icc2_shell
+dc_shell
+start_gui
+```

@@ -10,7 +10,7 @@ Both Mealy and Moore machines can be used to design sequence detector logic. Fur
 2. Non-overlapping sequence detector – Once sequence detection is completed, another sequence detection can be started without any overlap.
    ![image](https://github.com/user-attachments/assets/5109a3cd-937b-4a6d-b6a0-746fc4ff92c4)
 
-## ENVIRONMENT 
+## ENVIRONMENT
 - **ROCKY LINUX**: The operating system environment in which Synopsys tools are employed
 ## TOOLS USED
 - **VERILOG HDL**: The RTL of the sequence detector was designed using the Hardware Description Language.
@@ -24,14 +24,14 @@ Both Mealy and Moore machines can be used to design sequence detector logic. Fur
 
 ## IMPORTANT COMMANDS
 ### ENVIRONMENT SETUP
-### Checks to see if the Synopsys tools are installed successfully and in the system path.
+### Checks to see if the Synopsys tools are installed successfully and in the system path:
 ``` which vcs
 which verdi
 which dc_shell
 which icc2_shell
 which pt_shell
 ```
-### Shows the graphical user interface, Verdi, ICC2 shell, or Design Compiler shell.
+### Shows the graphical user interface, Verdi, ICC2 shell, or Design Compiler shell:
 ``` verdi
 icc2_shell
 dc_shell
@@ -72,8 +72,9 @@ report_timing
 
 ![image](https://github.com/user-attachments/assets/a010b44a-835d-4a2a-9bf0-4b4bfaa00d03)
 
-Having maximum leaf cell count as 17 with dc slack as 0.42, 6th case is used for synthesis.
+- Having maximum leaf cell count as 17 with dc slack as 0.42, 6th case is used for synthesis.
 All these values are taken from report_qor and report_timing.
+- Mode used is COMPILE ULTRA.
 
 ### PHYSICAL DESIGN SYNTHESIS USING ICC2
 #### Launches the ICC2 shell and its GUI:
@@ -175,7 +176,7 @@ legalize_placement
 save_block -as seq_det_placement
 save_lib
 ```
-**STEP 4: Clock tree synthesis**
+**STEP 4: Clock tree synthesis:**
 ```
 check_design -checks pre_clock_tree_stage
 synthesize_clock_tree
@@ -190,7 +191,7 @@ clock_opt
 save_block -as seq_det_cts_CCD
 save_lib
 ```
-**STEP 5: Routing**
+**STEP 5: Routing:**
 ```
 set_app_options -name route.global.timing_driven -value true
 set_app_options -name route.global.crosstalk_driven -value false
@@ -298,7 +299,7 @@ GUI:
 ## CREDITS:
 - This project was finished as a component of Pandit Deendayal Energy University's (PDEU) RTL to GDSII Flow workshop.
 - We are deeply appreciative of VLSI Expert Mr. Puneet Mittal, for his outstanding leadership, technical mentoring, and unwavering support during the workshop, and the distinguished PDEU teaching members, for providing a solid basis in VLSI design and facilitating hands-on learning with cutting-edge EDA tools.
-## SUBMITTED BY:
+## MADE BY:
 - Name: Devanshi Agarwal
 - Roll no.: 23BEC057
 - College: Pandit Deendayal Energy University, Gandhinagar

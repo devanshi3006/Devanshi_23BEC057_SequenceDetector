@@ -9,13 +9,13 @@ Both Mealy and Moore machines can be used to design sequence detector logic. Fur
    ![image](https://github.com/user-attachments/assets/5109a3cd-937b-4a6d-b6a0-746fc4ff92c4)
 
 ## ENVIRONMENT 
-**ROCKY LINUX**: The operating system environment in which Synopsys tools are employed
+- **ROCKY LINUX**: The operating system environment in which Synopsys tools are employed
 ## TOOLS USED
-**VERILOG HDL**: The RTL of the sequence detector was designed using the Hardware Description Language.
+- **VERILOG HDL**: The RTL of the sequence detector was designed using the Hardware Description Language.
 
-**Synopsys VCS**: Combines and models  RTL-level Verilog code
+- **Synopsys VCS**: Combines and models  RTL-level Verilog code
 
-**Verdi**: Waveform viewer for debugging simulation results
+- **Verdi**: Waveform viewer for debugging simulation results
 
 ## FLOW OF THE PROJECT
 ![FINITE STATE MACHINE](https://github.com/user-attachments/assets/e3ab79ac-12c7-47ec-a586-4f48c6a2fabb)
@@ -217,8 +217,106 @@ source scripts\route.tcl
 ```
 #### RESULTS AFTER STEP 1 (FLOORPLANNING):
 ![image](https://github.com/user-attachments/assets/868c76f7-eba1-4a6c-95b9-3750c9d4cee6)
+Report_qor:
 ![image](https://github.com/user-attachments/assets/80e2116a-4095-4035-8a85-5dced517c8eb)
 ![image](https://github.com/user-attachments/assets/a07070a8-6f50-4c96-a2a1-452c88df9cb0)
+
+#### RESULTS AFTER STEP 2 (POWERPLANNING):
+![image](https://github.com/user-attachments/assets/748e59b9-1b14-468d-8dc5-b7660910e94e)
+Report_qor:
+![image](https://github.com/user-attachments/assets/a2a4a1f1-83c5-4d06-accc-2ab7368b45bf)
+![image](https://github.com/user-attachments/assets/ff097867-643a-4695-9507-0488127330f5)
+
+#### RESULTS AFTER STEP 3 (PLACEMENT):
+![image](https://github.com/user-attachments/assets/37b88284-4193-42ff-b829-b109e04d134f)
+Report_qor:
+![image](https://github.com/user-attachments/assets/bc70ec70-3b26-4d19-9511-1562523a78b9)
+![image](https://github.com/user-attachments/assets/1f755d81-f070-4096-9089-f021d9df0aed)
+![image](https://github.com/user-attachments/assets/763dfcf6-90d5-4318-acc9-cdfad97324f2)
+
+Report_timing:
+![image](https://github.com/user-attachments/assets/9f1870c6-39e0-45b9-a7fe-b361ed016037)
+#### RESULTS AFTER STEP 4 (CLOCK):
+![image](https://github.com/user-attachments/assets/aa4ebd65-8cc9-4c23-a686-b1278d72931c)
+Report_qor:
+![image](https://github.com/user-attachments/assets/ec2b7da2-3cfb-470c-88e5-f568b0fa23e7)
+![image](https://github.com/user-attachments/assets/e5f73602-b750-4771-8f65-d7727bb99462)
+![image](https://github.com/user-attachments/assets/922ab2db-3020-4c9c-a035-bb06adb003e4)
+#### RESULTS AFTER STEP 5 (ROUTE):
+![image](https://github.com/user-attachments/assets/3b2fc7df-1ed9-4cf6-97c1-f31d10739c26)
+Report_qor:
+![image](https://github.com/user-attachments/assets/12a3789f-387b-47ef-8a54-7a8b918264ad)
+![image](https://github.com/user-attachments/assets/94712492-a47b-48b3-bf92-bcf916fb2ba3)
+![image](https://github.com/user-attachments/assets/fc8e9556-5091-4d69-8e6c-fd2f13773967)
+Report_timing:
+![image](https://github.com/user-attachments/assets/006a1137-c509-45f7-ae0c-25ff174c7a4a)
+Report_power:
+![image](https://github.com/user-attachments/assets/7c8897b1-8570-46ae-accc-1dfdd2ed64a6)
+
+### Static Timing Analysis Using Prime Time:
+#### Launches the PT shell and its GUI:
+```
+pt_shell
+start_gui
+```
+#### Run the pt file:
+```
+source scripts\run_pt_p2.tcl
+```
+#### PrimeTime timing path GUI visualization:
+```
+set paths [report_timing -max_paths 1]
+gui_show_timing_path -paths $paths
+set paths [get_timing_paths -max_paths 1]
+gui_show_timing_path -paths $paths
+```
+#### Generates reports which provides important parameters for synthesis:
+```
+report_qor
+report_timing
+```
+### RESULTS AFTER PT SHELL:
+Report_qor:
+![image](https://github.com/user-attachments/assets/5c04b6e6-091a-480b-b92b-f434bb30a9ab)
+![image](https://github.com/user-attachments/assets/db9f3729-47b0-44a8-bba9-ad467eff9188)
+Report_timing:
+![image](https://github.com/user-attachments/assets/92eca8c1-2392-4268-8169-6a5e56b86cbc)
+GUI:
+![image](https://github.com/user-attachments/assets/671d434f-c9f5-4acd-a519-244be3d765be)
+![image](https://github.com/user-attachments/assets/59656bc7-3582-4fc2-b450-a0acf37720a3)
+![image](https://github.com/user-attachments/assets/6738ae3f-bad1-4af3-b40c-ecd69349dd51)
+
+## FINAL RESULTS:
+- ***AREA:*** 34.149 μm^2
+
+- ***SLACK:*** 0.59 ns
+
+- Using Verilog HDL and Synopsys tools, this project effectively illustrates the entire RTL to GDSII flow for a sequence detector 110.  The SAED 32nm standard cell library under SS corner was used to physically implement the design after it was validated through simulation and synthesized under time restrictions.
+
+## CREDITS:
+- This project was finished as a component of Pandit Deendayal Energy University's (PDEU) RTL to GDSII Flow workshop.
+- We are deeply appreciative of VLSI Expert Mr. Puneet Mittal, for his outstanding leadership, technical mentoring, and unwavering support during the workshop, and the distinguished PDEU teaching members, for providing a solid basis in VLSI design and facilitating hands-on learning with cutting-edge EDA tools.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

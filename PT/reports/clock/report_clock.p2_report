@@ -1,0 +1,29 @@
+****************************************
+Report : clock_skew
+Design : seq_det
+Version: W-2024.09
+Date   : Tue Jun  3 14:38:39 2025
+****************************************
+
+              Min Rise  Min Fall  Max Rise  Max Fall     Hold          Setup        Related
+Object          Delay     Delay     Delay     Delay   Uncertainty   Uncertainty      Clock
+-----------------------------------------------------------------------------------------------
+Clock         0.000000  0.000000  0.000000  0.000000  0.100000      0.300000          -- 
+
+****************************************
+Report : clock
+Design : seq_det
+Version: W-2024.09
+Date   : Tue Jun  3 14:38:39 2025
+****************************************
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock             Period          Waveform            Attrs     Sources
+-----------------------------------------------------------------------
+Clock           3.000000          {0.000000 1.500000}           {Clock}
+
+1

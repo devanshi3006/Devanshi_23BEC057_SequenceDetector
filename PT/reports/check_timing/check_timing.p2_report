@@ -1,0 +1,35 @@
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Warning: There are 3 ports with parasitics but with no driving cell.
+
+Ports
+------------------------------------------------------------
+Clock
+data_in
+reset
+
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+ Failed clocks set      Related clocks           Original Period     Expanded Period     Added Edges     Voltage Config
+-----------------------------------------------------------------------------------------------------------------------
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Warning: There are 2 ports with partially defined input delays.
+
+Ports
+------------------------------------------------------------
+data_in
+reset
+
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+
+Check cell voltage level related issues including rail voltages
+Cell Name                      min/max    issues found 
+----------------------------------------------------------------------
+0

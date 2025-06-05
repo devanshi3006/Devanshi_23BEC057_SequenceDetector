@@ -1,0 +1,12 @@
+****************************************
+Report : global_timing
+	-format { narrow }
+Design : seq_det
+Version: W-2024.09
+Date   : Tue Jun  3 14:38:39 2025
+****************************************
+
+No setup violations found.
+
+No hold violations found.
+1

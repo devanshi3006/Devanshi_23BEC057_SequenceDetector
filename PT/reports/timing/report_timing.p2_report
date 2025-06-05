@@ -1,0 +1,20 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min_max
+	-nosplit
+	-input_pins
+	-nets
+	-slack_lesser_than 0.000000
+	-max_paths 1
+	-sort_by slack
+Design : seq_det
+Version: W-2024.09
+Date   : Tue Jun  3 14:38:39 2025
+****************************************
+
+No paths with slack less than 0.000000.
+
+No paths with slack less than 0.000000.
+
+1

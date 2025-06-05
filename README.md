@@ -22,15 +22,35 @@ Both Mealy and Moore machines can be used to design sequence detector logic. Fur
 
 ## IMPORTANT COMMANDS
 ### ENVIRONMENT SETUP
+### Checks to see if the Synopsys tools are installed successfully and in the system path.
 ``` which vcs
 which verdi
 which dc_shell
 which icc2_shell
 which pt_shell
 ```
-### Checks to see if the Synopsys tools are installed successfully and in the system path.
+### Shows the graphical user interface, Verdi, ICC2 shell, or Design Compiler shell.
 ``` verdi
 icc2_shell
 dc_shell
 start_gui
 ```
+### RTL SIMULATION
+#### Compiles the RTL Verilog code:
+```vcs -full64 RTL_Verilog_Code/seq_det.v -debug_access+all -lca -kdb```
+#### Compiles the testbench code:
+```vcs -full64 Testbench/seq_det_tb.v -debug_access+all -lca -kdb```
+#### Executes the compiled simulation:
+```./simv```
+#### Prompts Verdi to open the waveform file for signal analysis:
+```verdi -ssf novas.fsdb -nologo```
+#### OUTPUT:
+
+
+
+
+
+
+
+
+

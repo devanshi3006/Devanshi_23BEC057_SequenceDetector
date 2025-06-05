@@ -2,7 +2,8 @@
 SUBMITTED BY : Devanshi Agarwal 
 ## INTRODUCTION:
 A sequence detector in digital electronics is a circuit that generates an output signal when a specific sequence of input bits is detected.For combinational designs, the output value completely depends on the present value of the inputs and for sequential designs, output value not only depends on present input but also depends on its previously stored value i.e. past behavior of the design. These sequential designs are formally knowns as finite-state machines that have a fixed number of states.
-                                                     ![image](https://github.com/user-attachments/assets/9ccd4b92-4cb2-42e7-9027-08aec69b2271)
+
+ ![image](https://github.com/user-attachments/assets/9ccd4b92-4cb2-42e7-9027-08aec69b2271)
 
 Both Mealy and Moore machines can be used to design sequence detector logic. Further, these machines are classified as:
 1. Overlapping sequence detector – Final bits of the sequence can be the start of another sequence. Thus, it allows overlap.
